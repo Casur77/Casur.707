@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Изменили initial-scale на 0.5 -->
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <title>Силовой тренинг от Джасура</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Силовой тренинг от Джасура</h1>
+    <p>Введите ваш максимальный вес (ПМ) для приседаний, тяги и жима, чтобы рассчитать тренировочные веса и тоннаж. При переключении упражнения данные сохраняются.</p>
+  </header>
+
+  <section id="inputs">
+    <div class="input-group">
+      <label for="pm_squats">ПМ Приседания (кг):</label>
+      <input type="number" id="pm_squats" value="100" placeholder="100">
+    </div>
+    <div class="input-group">
+      <label for="pm_deadlift">ПМ Тяга (кг):</label>
+      <input type="number" id="pm_deadlift" value="80" placeholder="80">
+    </div>
+    <div class="input-group">
+      <label for="pm_bench">ПМ Жим (кг):</label>
+      <input type="number" id="pm_bench" value="60" placeholder="60">
+    </div>
+  </section>
+
+  <section id="exercise-select">
+    <h3>Выберите упражнение:</h3>
+    <select id="exercise">
+      <option value="squats">Приседания</option>
+      <option value="deadlift">Тяга</option>
+      <option value="bench">Жим</option>
+    </select>
+    <button id="updateBtn">Обновить</button>
+  </section>
+
+  <section id="training-table">
+    <h2>Таблица тренировок</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Неделя</th>
+          <th>День</th>
+          <th>Процент</th>
+          <th>Подходы x Повтор (3 набора)</th>
+          <th>Вес (кг)</th>
+          <th>Тоннаж (кг)</th>
+        </tr>
+      </thead>
+      <tbody id="trainingTable"></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html><section id="training-table">
+  <h2>Таблица тренировок</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Неделя</th>
+        <th>День</th>
+        <th>Процент</th>
+        <th>Подходы x Повтор (3 набора)</th>
+        <th>Вес (кг)</th>
+        <th>Тоннаж (кг)</th>
+      </tr>
+    </thead>
+    <tbody id="trainingTable"></tbody>
+  </table>
+  <button id="updateBtn">Обновить</button>
+  <button id="downloadBtn">Скачать таблицу (CSV)</button>
+</section>
